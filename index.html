@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Radiología Dental</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  
+  <!-- Favicons ================================================== -->
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  
+  <!-- Bootstrap================================================ -->
+  <link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+  
+  <!-- Stylesheet ================================================== -->
+  <link rel="stylesheet" type="text/css"  href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="js/modernizr.custom.js"></script>
+</head>
+<body>
+
+
+  <!-- Navigation ==========================================-->
+  <nav id="menu" class="navbar navbar-default">
+    <div class="container"> 
+      <!-- Menu group -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> 
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span></button>
+        <a class="navbar-brand" href="index.html"><img src="img/logo-h.jpg" style="width: 200px;"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#home" class="page-scroll">Inicio</a></li>
+          <li><a href="#about-section" class="page-scroll">Quienes Somos</a></li>
+          <li><a href="#contact-section" class="page-scroll">Contacto</a></li>
+          <li><a href="app/index.php" class="page-scroll">Ingresar</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header =================================================-->
+  <header class="text-center" name="home">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <img src="img/bg.jpg" style="width: 100%">        
+        </div>      
+      </div>   
+    </div>
+  </header>
+
+  <!-- About Section ===========================================-->
+  <div id="about-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h4>Acerca de nosotros</h4>
+          <p>Consultorio atendido por Técnicas Superiores en salud especialidad en Radiología, matriculadas, con curso de Radiología Odontológica.<br><br>Nuestra intención es principalmente que la Ciudad de Marcos Paz cuente con un consultorio radiológico dental, para trabajar a la par de los Odontólogos sea de manera particular como así también el lograr ser prestadoras de las obras sociales interesados en que sus afiliados no tengan la necesidad de salir de la ciudad, para tener que realizarse dicho estudio.<br><br>El consultorio cuenta con un equipo de tecnología digital avanzada totalmente nuevo, llamado sistema Panorámico, radiografía extraoral, teniendo como beneficio la reducción de la espera para la obtención de las imágenes en tan solo 10 seg. brindando así más tiempo a la atención de los pacientes, donde el mismo se lleva su placa impresa en cuestión de minutos.<br><br> Este equipo logra obtener imágenes de alta calidad, dado a su tiempo de exposición mínima, reduce las sombras de la columna vertebral y produce imágenes claras, nítidas, contrastadas, con un alto nivel de detalles en cuestión de segundos. Mejora el posicionamiento para reducir las repeticiones de tomas y hace más eficiente el flujo de trabajo. Por otra parte, tenemos un sistema de impresión de laser seca que proporciona una calidad excepcional de imagen.<br><br>Contamos a su vez, con Equipo intraoral TXD tijera y digitalizador de imagen.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Especialidades Section ===========================================-->
+  <div id="about-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h4>En Radiología Dental realizamos los siguientes estudios:</h4>
+          <br>
+          <div class="col-md-6">
+            <h3><i class="fa fa-check"></i> Panorámica</h3>
+            <h3><i class="fa fa-check"></i> Panorámica Segmentada</h3>
+            <h3><i class="fa fa-check"></i> Seriada Completa</h3>
+            <h3><i class="fa fa-check"></i> Seriada Maxilar Superior</h3>
+          </div>
+          <div class="col-md-6">
+            <h3><i class="fa fa-check"></i> Seriada Maxilar Inferior</h3>
+            <h3><i class="fa fa-check"></i> ATM (Articulación Temporo Mandibular)</h3>
+            <h3><i class="fa fa-check"></i> Fotos clínicas para Ortondocia</h3>
+          </div>           
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Section ================================================================-->
+  <div id="contact-section">
+    <div class="container">
+      <div class="col-md-6">
+        <h4>Envíenos su consulta a través de este formulario</h4>
+        <form name="sentMessage" id="contactForm" novalidate>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <input type="text" id="name" class="form-control" placeholder="Nombre" required="required">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <input type="email" id="email" class="form-control" placeholder="Email" required="required">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea name="message" id="message" class="form-control" rows="8" placeholder="Escriba su mensaje" required></textarea>
+            <p class="help-block text-danger"></p>
+          </div>
+          <div id="success"></div>
+          <button type="submit" class="btn btn-default">Enviar</button>
+        </form> 
+      </div>
+      <div class="col-md-6">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2755.512336445364!2d-58.84128601900723!3d-34.78392511414981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcec1ca766b165%3A0x26fbdedea822a493!2sAg%C3%BCero+211%2C+B1727DXE+Marcos+Paz%2C+Pcia+de+Buenos+Aires!5e0!3m2!1ses-419!2sar!4v1541184177662" width="100%" height="450px" frameborder="0" style="border:0" allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- hours Section ================================================================-->
+  <div id="hours-section">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Horarios de Atención:</h5>
+          <p>Lunes a Viernes: 09:00 a 13:00 hs - 15:30 a 19:30hs</p>
+          <p>Sábados: 9:00 a 13:00hs</p>
+        </div>      
+        <div class="col-md-4">
+          <br>
+          <p>Envie su consulta via e-mail a:</p><h3><i class="fa fa-envelope"></i> info@radiologiadental.com.ar</h3>
+        </div>
+        <div class="col-md-4">
+          <br>
+          <p>o comuniquese a nuestro WhatsApp:</p><h3><i class="fa fa-whatsapp"></i> (+54)11-5461-8264</h3>
+        </div>
+      </div>     
+    </div>   
+  </div>
+
+
+  <!-- footer Section ================================================================-->
+  <div id="footer" class="text-center">
+    <div class="container">
+      <div id="social-section">
+        <div class="container">
+          <div id="iconos" class="social">
+            <ul>
+              <li><a href="https://www.facebook.com/radiologia.dental.9"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="https://www.instagram.com/rdx_radiologiadental/"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p>Radiología Dental - Aguero 211 Marcos Paz, Pcia. de Buenos Aires</p>
+          <p></p>
+          <p>
+            &copy; radiologiadental - Todos los derechos reservados
+          </p>
+        </div>    
+      </div>
+    </div>
+  </div>
+  <div id="footer2" class="text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+            <p>Desarrollado por <a href="http://www.oestedev.com"><img src="img/logo.png" height="15" width="70"></a></p>
+        </div>    
+      </div>
+    </div>
+  </div>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+<script type="text/javascript" src="js/jquery.1.11.1.js"></script> 
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script type="text/javascript" src="js/bootstrap.js"></script> 
+<script type="text/javascript" src="js/SmoothScroll.js"></script> 
+<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script> 
+<script type="text/javascript" src="js/jquery.isotope.js"></script> 
+<script type="text/javascript" src="js/jqBootstrapValidation.js"></script> 
+<script type="text/javascript" src="js/contact_me.js"></script> 
+
+<!-- Javascripts ================================================== --> 
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
