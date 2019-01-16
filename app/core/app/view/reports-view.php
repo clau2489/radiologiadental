@@ -133,10 +133,10 @@ if(count($users)>0){
 		<div class="panel-heading">Reportes</div>
 		<table class="table table-bordered table-hover">
 			<thead>
+				<th>Fecha</th>
+				<th>hora</th>				
 				<th>Paciente</th>
 				<th>Atendido por</th>
-				<th>Fecha</th>
-				<th>hora</th>
 				<th>Estado</th>
 				<th>Pago en</th>
 				<th>Costo</th>
@@ -149,10 +149,10 @@ if(count($users)>0){
 				$coverage = $user->getCoverage();
 				?>
 				<tr>
+				<td><?php $nueva_fecha = date("d-m-Y",strtotime($user->date_at)); echo $nueva_fecha; ?></td>
+				<td><?php echo $user->time_at; ?></td>					
 				<td><?php echo $pacient->lastname." ".$pacient->name; ?></td>
 				<td><?php echo $medic->name." ".$medic->lastname; ?></td>
-				<td><?php $nueva_fecha = date("d-m-Y",strtotime($user->date_at)); echo $nueva_fecha; ?></td>
-				<td><?php echo $user->time_at; ?></td>
 				<td><?php echo $user->getStatus()->name; ?></td>
 				<td><?php echo $user->getPayment_type()->name; ?></td>
 				<td>$ <?php echo number_format($user->price,2,".",",");?>						

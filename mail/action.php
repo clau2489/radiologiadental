@@ -1,6 +1,6 @@
 <?php
 $remitente = $_POST['email'];
-$destinatario = 'info@radiologiadental.com.ar'; // en esta línea va el mail del destinatario.
+$destinatario = 'clau_coronelmilla@hotmail.com'; // en esta línea va el mail del destinatario.
 $asunto = 'Consulta'; // acá se puede modificar el asunto del mail
 if (!$_POST){
 ?>
