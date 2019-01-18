@@ -240,24 +240,26 @@
     <div class="container">
       <div class="col-md-6">
         <h4>Envíenos su consulta a través de este formulario</h4>
-        <form action="mail/action.php" id="contactForm">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-group">
-                <input type="text" id="name" class="form-control" placeholder="Nombre" required="required">
-              </div>
+          <form id="contact" action="mail/contacto.php" method="post">
+            <div class="form-group">
+              <label for="nombre">Nombre y Apellido</label>
+              <input id="nombre" type="text" name="nombre" class="form-control" required>
             </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <input type="email" id="email" class="form-control" placeholder="Email" required="required">
-              </div>
+            <div class="form-group">
+              <label for="asunto">Asunto</label>
+              <input id="asunto" type="text" name="asunto" class="form-control" required>
+            </div>                    
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input id="email" type="email" name="email" class="form-control" required>
+            </div>                    
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" class="form-control" rows="6" required></textarea>
             </div>
-          </div>
-          <div class="form-group">
-            <textarea name="message" id="message" class="form-control" rows="8" placeholder="Escriba su mensaje" required></textarea>
-          </div>
-          <input type="submit" class="btn btn-default"></input>
-        </form> 
+            <input name="submit" type="submit" id="contact-submit" class="btn btn-success"></input>
+            <div id="miresultado"></div>                    
+          </form>
       </div>
       <div class="col-md-6">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2755.512336445364!2d-58.84128601900723!3d-34.78392511414981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcec1ca766b165%3A0x26fbdedea822a493!2sAg%C3%BCero+211%2C+B1727DXE+Marcos+Paz%2C+Pcia+de+Buenos+Aires!5e0!3m2!1ses-419!2sar!4v1541184177662" width="100%" height="450px" frameborder="0" style="border:0" allowfullscreen>
