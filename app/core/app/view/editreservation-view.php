@@ -29,6 +29,20 @@ $coverages = CoverageData::getAll();
                 </select>
               </div>
             </div>
+          <div class="form-group">
+            <label for="inputEmail1" class="col-md-4">Edad</label>
+            <div class="col-md-8">
+              <input class="form-control" value="<?php
+              foreach($pacients as $p):
+              if($p->id==$reservation->pacient_id){ 
+                $fecha = time() - strtotime($p->day_of_birth); 
+                $edad = floor((($fecha / 3600) / 24) / 360);
+                echo ''.$edad.' años';}
+                endforeach;
+                ?>"
+              >
+            </div>
+          </div>            
             <div class="form-group">
               <label for="inputEmail1" class="col-md-4">Tipo de Estudio</label>
               <div class="col-md-8">

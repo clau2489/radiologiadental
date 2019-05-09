@@ -1,10 +1,21 @@
 <?php
+// Lo mismo que error_reporting(E_ALL);
+ 
+ini_set('error_reporting', E_ALL);
+
+
 $thejson=null;
 $events = ReservationData::getEvery();
 foreach($events as $event){
-	$thejson[] = array("title"=>$event->time_at,"url"=>"./?view=editreservation&id=".$event->id,"start"=>$event->date_at);
+	$category = $event->getCategory();
+	$thejson[] = array("title"=>$event->time_at, 
+						"url"=>"./?view=editreservation&id=".$event->id, 
+						"start"=>$event->date_at, 
+						"description"=>$category->name
+					);
 }
 ?>
+
 <script>
 	$(document).ready(function() {
 
@@ -14,6 +25,15 @@ foreach($events as $event){
 				center: 'title',
 				right: 'month,agendaWeek,agendaDay'
 			},
+			eventRender: function (eventObj, $el) {
+	        $el.popover({
+	            title: eventObj.title,
+	            content: eventObj.description,
+	            trigger: 'hover',
+	            placement: 'top',
+	            container: 'body'
+	        });
+	        },
 			defaultDate: '<?php echo date('Y-m-d');?>',
 			editable: false,
 			eventLimit: true, // allow "more" link when too many events

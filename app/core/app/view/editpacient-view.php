@@ -45,6 +45,12 @@ $user = PacientData::getById($_GET["id"]);
             </div>
           </div>
           <div class="form-group">
+            <label for="inputEmail1" class="col-md-4">Edad</label>
+            <div class="col-md-8">
+              <input class="form-control" value="<?php $fecha = time() - strtotime($user->day_of_birth); $edad = floor((($fecha / 3600) / 24) / 360);echo ''.$edad.' años';?>">
+            </div>
+          </div>
+          <div class="form-group">
             <label for="inputEmail1" class="col-md-4">Direccion</label>
             <div class="col-md-8">
               <input type="text" name="address" value="<?php echo $user->address;?>" class="form-control" required id="username" placeholder="Direccion">

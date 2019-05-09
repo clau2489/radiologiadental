@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/> 
+<script type="text/javascript" src="DataTables/datatables.min.js"></script>
 <div class="row">
 	<div class="col-md-12">
 		<div class="card">
@@ -11,7 +13,7 @@
 				if(count($users)>0){
 					// si hay usuarios
 					?>
-					<table class="table table-bordered table-hover">
+					<table id="example" class="stripe" style="width:100%">
 					<thead>
 					<th>Nombre completo</th>
 					<th>Documento</th>
@@ -48,3 +50,8 @@
 		?>
 	</div>
 </div>
+<script type="text/javascript">
+	$(document).ready(function() {
+    $('#example').DataTable();
+} );
+</script>
