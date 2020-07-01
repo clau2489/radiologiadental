@@ -143,7 +143,7 @@ $coverages = CoverageData::getAll();
                   <button type="submit" class="btn btn-primary btn-lg btn-block"><i class="fa fa-retweet"></i> Actualizar Cita </button>
                 </div>
                 <div class="col-md-4">
-                  <a type="button" class="btn btn-primary btn-lg btn-block" onclick="printDiv('divName')" value="Imprimir Constancia"><i class="fa fa-print"></i> Imprimir Constancia</a>
+                  <a href="core/app/view/report-view.php?id=<?php echo $reservation->id;?>" class="btn btn-primary btn-lg btn-block"><i class="fa fa-print"></i> Imprimir Constancia</a>
                 </div>
                 <div class="col-md-4">
                   <a href="index.php?action=delreservation&id=<?php echo $reservation->id;?>" class="btn btn-primary btn-lg btn-block"><i class="fa fa-trash"></i> Eliminar Turno</a>

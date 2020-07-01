@@ -30,7 +30,7 @@ $categories = CategoryData::getAll();
             <select name="pacient_id" class="selectpicker" data-width="100%" data-live-search="true" required>
               <option>Seleccionar </option>
               <?php foreach($pacients as $p):?>
-                <option value="<?php echo $p->id; ?>"><?php echo $p->lastname." ".$p->name; ?></option>
+                <option value="<?php echo $p->id; ?>"><?php echo $p->lastname." ".$p->name." - DNI: ".$p->document; ?></option>
               <?php endforeach; ?>
             </select>
           </div>

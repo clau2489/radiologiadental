@@ -68,37 +68,37 @@ class reservationData {
 
 
 	public static function getAll(){
-		$sql = "select * from ".self::$tablename." where date(date_at)>=date(NOW()) order by date_at";
+		$sql = "select * from ".self::$tablename." where date(date_at)>=date(NOW()) order by date_at, time_at ASC";
 		$query = Executor::doit($sql);
 		return Model::many($query[0],new reservationData());
 	}
 
 	public static function getAllPendings(){
-		$sql = "select * from ".self::$tablename." where date(date_at)>=date(NOW()) and status_id=1 and payment_id=1 order by date_at";
+		$sql = "select * from ".self::$tablename." where date(date_at)>=date(NOW()) and status_id=1 and payment_id=1 order by date_at, time_at ASC";
 		$query = Executor::doit($sql);
 		return Model::many($query[0],new reservationData());
 	}
 
 
 	public static function getAllByPacientId($id){
-		$sql = "select * from ".self::$tablename." where pacient_id=$id order by date_at";
+		$sql = "select * from ".self::$tablename." where pacient_id=$id order by date_at, time_at ASC";
 		$query = Executor::doit($sql);
 		return Model::many($query[0],new reservationData());
 	}
 
 	public static function getAllByMedicId($id){
-		$sql = "select * from ".self::$tablename." where medic_id=$id order by date_at";
+		$sql = "select * from ".self::$tablename." where medic_id=$id order by date_at, time_at ASC";
 		$query = Executor::doit($sql);
 		return Model::many($query[0],new reservationData());
 	}
 
-	public static function getBySQL($sql){
-		$query = Executor::doit($sql);
+	public static function getBySQL($sqlv){
+		$query = Executor::doit($sqlv);
 		return Model::many($query[0],new reservationData());
 	}
 
 	public static function getOld(){
-		$sql = "select * from ".self::$tablename." where date(date_at)<date(NOW()) order by date_at";
+		$sql = "select * from ".self::$tablename." where date(date_at)<date(NOW()) order by date_at, time_at ASC";
 		$query = Executor::doit($sql);
 		return Model::many($query[0],new reservationData());
 	}

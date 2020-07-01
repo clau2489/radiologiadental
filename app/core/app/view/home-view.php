@@ -8,10 +8,13 @@ $thejson=null;
 $events = ReservationData::getEvery();
 foreach($events as $event){
 	$category = $event->getCategory();
+	$pacient = $event->getPacient();
+	$status = $event->getStatus();
 	$thejson[] = array("title"=>$event->time_at, 
 						"url"=>"./?view=editreservation&id=".$event->id, 
 						"start"=>$event->date_at, 
-						"description"=>$category->name
+						"description"=>" Tipo de Estudio: " .$category->name." Estado:".$status->name,
+						"tooltip"=>$pacient->lastname." ".$pacient->name." DNI:".$pacient->document
 					);
 }
 ?>
@@ -24,10 +27,10 @@ foreach($events as $event){
 				left: 'prev,next today',
 				center: 'title',
 				right: 'month,agendaWeek,agendaDay'
-			},
+			},		
 			eventRender: function (eventObj, $el) {
 	        $el.popover({
-	            title: eventObj.title,
+	            title: eventObj.tooltip,
 	            content: eventObj.description,
 	            trigger: 'hover',
 	            placement: 'top',

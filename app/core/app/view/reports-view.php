@@ -119,7 +119,8 @@ if($_GET["status_id"]!=""||$_GET["coverage_id"]!="" ||$_GET["medic_id"]!="" ||$_
 }
 
 //echo $sql;
-		$users = ReservationData::getBySQL($sql);
+                $sqlv = $sql ."order by date_at, time_at ASC";
+		$users = ReservationData::getBySQL($sqlv);
 
 }else{
 		$users = ReservationData::getAllPendings();
