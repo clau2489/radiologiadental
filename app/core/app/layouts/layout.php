@@ -80,6 +80,12 @@
                 </a>
             </li>
             <li>
+                <a href="./?view=odontologos">
+                    <i class="fa fa-user"></i>
+                    <p>Odontólogos</p>
+                </a>
+            </li>            
+            <li>
                 <a href="./?view=reports">
                     <i class="fa fa-area-chart"></i>
                     <p>Reportes</p>

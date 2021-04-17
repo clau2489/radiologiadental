@@ -1,16 +1,12 @@
 <div class="row">
 	<div class="col-md-8 col-md-offset-2">
     <div class="card">
-      <div class="card-header" data-background-color="blue">
-        <h4 class="title">Nuevo Estudio</h4>
-      </div>
       <div class="card-content table-responsive">
 		    <form class="form-horizontal" method="post" id="addcategory" action="index.php?view=addcategory" role="form">
+          <h4 class="title">Nuevo Estudio</h4>
           <div class="form-group">
-            <label for="inputEmail1" class="col-md-4">Nombre de estudio a realizar*</label>
-            <div class="col-md-8">
-              <input type="text" name="name" required class="form-control" id="name" placeholder="Nombre">
-            </div>
+            <label>Nombre de estudio a realizar*</label>
+            <input type="text" name="name" required class="form-control" id="name" placeholder="Nombre">
           </div>
           <div class="form-group">
             <div class="col-md-offset-4 col-md-4 col-md-offset-4">

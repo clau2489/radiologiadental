@@ -4,7 +4,6 @@
 	<div class="col-md-12">
 		<div class="card">
 			<div class="card-header" data-background-color="blue">
-				<h4 class="title">Pacientes</h4>
 			</div>
 			<div class="card-content table-responsive">
 				<a href="index.php?view=newpacient" class="btn btn-primary"><i class='fa fa-plus-circle'></i> Nuevo Paciente</a>
@@ -13,7 +12,7 @@
 				if(count($users)>0){
 					// si hay usuarios
 					?>
-					<table id="example" class="stripe" style="width:100%">
+					<table id="example" class="cell-border" style="width:100%">
 					<thead>
 					<th>Nombre completo</th>
 					<th>Documento</th>
@@ -51,7 +50,9 @@
 	</div>
 </div>
 <script type="text/javascript">
-	$(document).ready(function() {
-    $('#example').DataTable();
+
+$(document).ready(function() {
+	$('#example').DataTable();
 } );
+
 </script>
