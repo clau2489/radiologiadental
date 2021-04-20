@@ -17,8 +17,8 @@
   <script src='assets/fullcalendar/moment.min.js'></script>
   <script src='assets/fullcalendar/fullcalendar.min.js'></script>
   <?php endif; ?>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script>
+  <link rel="stylesheet" href="assets/bootstrap-select.min.css">
+  <script src="assets/bootstrap-select.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/i18n/defaults-*.min.js"></script>
   <script>
     function printDiv(divName) {
@@ -28,7 +28,9 @@
        window.print();
        document.body.innerHTML = originalContents;
   }
-  </script> 
+  </script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>

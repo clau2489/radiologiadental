@@ -1,9 +1,14 @@
+<link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/> 
+<script type="text/javascript" src="DataTables/datatables.min.js"></script>
+<style type="text/css">
+table.dataTable tbody th, table.dataTable tbody td {
+    padding: 3px 10px;
+}	
+</style>
  <div class="row">
 	<div class="col-md-12">
 		<div class="card">
-			<div class="card-header" data-background-color="blue">
-				<h4 class="title">Tipos de coberturas</h4>
-			</div>
+			<h4 class="title">Tipos de coberturas</h4>
 			<div class="card-content table-responsive">
 				<a href="index.php?view=newcoverage" class="btn btn-primary"><i class='fa fa-plus-circle'></i> Agregar Cobertura</a>
 				<?php
@@ -12,7 +17,7 @@
 					// si hay usuarios
 					?>
 
-				<table class="table table-bordered table-hover">
+				<table id="example" class="stripe" style="width:100%">
 					<thead>
 					<th>Siglas</th>
 					<th>Denominación</th>
@@ -43,3 +48,8 @@
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('#example').DataTable();
+} );
+</script>

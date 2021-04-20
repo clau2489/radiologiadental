@@ -5,11 +5,11 @@ html {
 }
 
 body {
-    /*font-family: 'Roboto', sans-serif;*/
+font-family: 'Roboto', sans-serif;
+    font-size: 12px;
     line-height: 1.42857143;
     color: #333;
     background-color: #fff;
-    font-size: 12px;
 }
 
 h1, .h1 {
@@ -82,11 +82,10 @@ h2.title {
 .off-canvas-sidebar .nav {
   margin-top: 20px;
 }
-.sidebar .nav li > a,
-.off-canvas-sidebar .nav li > a {
-  margin: 10px 15px;
-  border-radius: 3px;
-  color: #3C4858;
+.sidebar .nav li > a, .off-canvas-sidebar .nav li > a {
+    /* margin: 10px 15px; */
+    border-radius: 3px;
+    color: #3C4858;
 }
 .sidebar .nav li:hover > a,
 .off-canvas-sidebar .nav li:hover > a {
@@ -269,7 +268,8 @@ h2.title {
 }
 .main-panel > .content {
     min-height: 90%;
-    background-color: #a9a9a940;
+    background-color: #a9a9a914;
+    text-transform: none;
 }
 .main-panel > .footer {
   border-top: 1px solid #e7e7e7;
@@ -2605,11 +2605,11 @@ footer .btn {
 }
 .card .title {
     margin-top: 0;
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
     text-align: center;
-    font-size: x-large;
-    text-transform: uppercase;
-    font-weight: 700;
+    font-size: large;
+    text-transform: initial;
+    color: #4c4c4c;
 }
 .card .card-image {
   height: 60%;
@@ -4134,9 +4134,10 @@ footer .btn {
 }
 
 .sidebar {
-    background-color: #8b82b0;
+    /* background-color: #8b82b0; */
+    background-color: #8bc2a1;
+    text-transform: initial;
 }
-
 .main-panel {
     background-color: white;
 }
@@ -4197,9 +4198,10 @@ select {
     font-size: 14px;
 }
 label {
-    /* font-size: 12px; */
-    /* font-family: sans-serif; */
+    font-size: 12px;
+    font-family: sans-serif;
     font-weight: normal;
+    text-transform: capitalize;
 }
 table.dataTable tbody th, table.dataTable tbody td {
     padding: 1px 6px;

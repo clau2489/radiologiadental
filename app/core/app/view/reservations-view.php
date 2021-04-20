@@ -1,9 +1,14 @@
+<link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/> 
+<script type="text/javascript" src="DataTables/datatables.min.js"></script>
+<style type="text/css">
+table.dataTable tbody th, table.dataTable tbody td {
+    padding: 3px 10px;
+}	
+</style>
 <div class="row">
 	<div class="col-md-12">
 		<div class="card">
-			<div class="card-header" data-background-color="blue">
-				<h4 class="title">Administración de Turnos</h4>
-			</div>
+			<h4 class="title">Administración de Turnos</h4>
 			<div class="card-content table-responsive">
 				<div class="row">
 					<div class="col-md-2">
@@ -52,12 +57,11 @@ if($_GET["q"]!=""||$_GET["pacient_id"]!="" ||$_GET["medic_id"]!="" ){
 
 }else{
 		$users = ReservationData::getAll();
-
 }
 		if(count($users)>0){
 			// si hay usuarios
 			?>
-			<table class="table table-bordered table-hover">
+			<table id="example" class="stripe" style="width:100%">
 			<thead>
 			<th>Fecha</th>
 			<th>Hora</th>				
@@ -71,7 +75,7 @@ if($_GET["q"]!=""||$_GET["pacient_id"]!="" ||$_GET["medic_id"]!="" ){
 				$medic = $user->getMedic();
 				?>
 				<tr>
-				<td><?php $nueva_fecha = date("d-m-Y",strtotime($user->date_at)); echo $nueva_fecha; ?></td>
+				<td><?php date_default_timezone_set('America/Argentina/Buenos_Aires'); $nueva_fecha = date("d-m-Y",strtotime($user->date_at)); echo $nueva_fecha; ?></td>
 				<td><?php echo $user->time_at; ?></td>					
 				<td><?php echo $pacient->lastname." ".$pacient->name; ?></td>
 				<td><?php echo $medic->lastname." ".$medic->name; ?></td>
@@ -80,23 +84,20 @@ if($_GET["q"]!=""||$_GET["pacient_id"]!="" ||$_GET["medic_id"]!="" ){
 				</td>
 				</tr>
 				<?php
-
 			}
 			?>
 			</table>
 			</div>
 			</div>
 			<?php
-
-
-
 		}else{
 			echo "<p class='alert alert-danger'>No hay pacientes</p>";
 		}
-
-
 		?>
-
-
 	</div>
 </div>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('#example').DataTable();
+} );
+</script>

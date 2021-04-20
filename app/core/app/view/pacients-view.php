@@ -1,10 +1,21 @@
 <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/> 
 <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+<style type="text/css">
+table.dataTable tbody th, table.dataTable tbody td {
+    padding: 3px 10px;
+}
+table.dataTable tbody th, table.dataTable tbody td {
+    padding: 0px 5px;
+}
+table.dataTable tbody th, table.dataTable tbody td {
+    padding: 0px 0px 0px 10px;
+    text-transform: uppercase;
+}	
+</style>
 <div class="row">
 	<div class="col-md-12">
 		<div class="card">
-			<div class="card-header" data-background-color="blue">
-			</div>
+			<h4 class="title">Pacientes</h4>
 			<div class="card-content table-responsive">
 				<a href="index.php?view=newpacient" class="btn btn-primary"><i class='fa fa-plus-circle'></i> Nuevo Paciente</a>
 				<?php
@@ -12,7 +23,7 @@
 				if(count($users)>0){
 					// si hay usuarios
 					?>
-					<table id="example" class="cell-border" style="width:100%">
+					<table id="example" class="stripe" style="width:100%">
 					<thead>
 					<th>Nombre completo</th>
 					<th>Documento</th>
@@ -50,9 +61,7 @@
 	</div>
 </div>
 <script type="text/javascript">
-
 $(document).ready(function() {
 	$('#example').DataTable();
 } );
-
 </script>
