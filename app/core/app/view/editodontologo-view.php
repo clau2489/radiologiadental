@@ -38,7 +38,7 @@ $user = OdontologoData::getById($_GET["id"]);
           <div class="form-group">
             <div class="col-md-offset-4 col-md-4 col-md-offset-4">
             <input type="hidden" name="user_id" value="<?php echo $user->id;?>">
-              <button type="submit" class="btn btn-primary btn-lg btn-block">Actualizar Odontologo</button>
+              <button type="submit" class="btn btn-default btn-block"><i class="fa fa-retweet"></i> Actualizar</button>
             </div>
           </div>
         </form>

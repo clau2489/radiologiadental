@@ -2,7 +2,13 @@
 	<div class="col-md-12">
 		<div class="card">
 			<h4 class="title">Pacientes</h4>
-			<h5 class="alert alert-danger" style="font-size: 12px;">El DNI ingresado ya se encuentra registrado. Verifique los datos e intente nuevamente. <a class="btn btn-success" href="index.php?view=newpacient">Agregar Paciente</a> </h5>
+			<br>
+			<div class="text-center">
+				<h5 class="title" style="font-size: 12px;">El DNI ingresado ya se encuentra registrado. Verifique los datos e intente nuevamente.  </h5>
+				<br>
+				<a class="btn btn-default" href="index.php?view=newpacient">Agregar Paciente</a>
+			</div>
+			
 			<br>
 			<p></p>
 		</div>

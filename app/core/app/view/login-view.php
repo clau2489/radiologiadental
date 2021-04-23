@@ -33,10 +33,10 @@ if(Session::getUID()!=""){
 				    		
 				    		<div class="row">
 				    			<div class="col-md-6">
-				    				<input class="btn btn-primary btn-block" type="submit" value="Iniciar Sesion">
+				    				<input class="btn btn-default btn-block" type="submit" value="Iniciar Sesion">
 				    			</div>
 				    			<div class="col-md-6">
-				    				<a class="btn btn-primary btn-block" href="../index.html">Volver</a>
+				    				<a class="btn btn-default btn-block" href="../index.html">Volver</a>
 				    			</div>				    			
 				    		</div>			    		
 				    	</fieldset>

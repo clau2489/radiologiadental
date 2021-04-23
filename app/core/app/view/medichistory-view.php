@@ -1,12 +1,12 @@
+<link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/> 
+<script type="text/javascript" src="DataTables/datatables.min.js"></script>
 <?php
 $pacient = MedicData::getById($_GET["id"]);
 ?>
 <div class="row">
 	<div class="card">
-  	<div class="card-header" data-background-color="blue">
-      <h4 class="title">Historial de Turnos por Técnico</h4>
-			<p>Técnico: <?php echo $pacient->name." ".$pacient->lastname;?></p>
-  	</div>
+  	<h4 class="title">Historial de Turnos por Técnico</h4>
+  	<h5>Técnico: <?php echo $pacient->name." ".$pacient->lastname;?></h5>
   	<div class="card-content table-responsive">
 			<div class="col-md-12">
 				<div class="btn-group pull-right">
@@ -16,7 +16,7 @@ $pacient = MedicData::getById($_GET["id"]);
 				if(count($users)>0){
 					// si hay usuarios
 					?>
-					<table class="table table-bordered table-hover">
+					<table id="example" class="cell-border" style="width:100%">
 					<thead>
 					<th>Fecha</th>
 					<th>Hora</th>
@@ -33,7 +33,7 @@ $pacient = MedicData::getById($_GET["id"]);
 						$payment_type = $user->getPayment_type();						
 						?>
 						<tr>
-						<td><?php $nueva_fecha = date("d-m-Y",strtotime($user->date_at)); echo $nueva_fecha; ?></td>
+						<td><?php date_default_timezone_set('America/Argentina/Buenos_Aires'); $nueva_fecha = date("d-m-Y",strtotime($user->date_at)); echo $nueva_fecha; ?></td>
 						<td><?php echo $user->time_at; ?></td>
 						<td><?php echo $pacient->lastname." ".$pacient->name; ?></td>
 						<td><?php echo $category->name; ?></td>
@@ -53,3 +53,8 @@ $pacient = MedicData::getById($_GET["id"]);
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#example').DataTable();
+	} );
+</script>

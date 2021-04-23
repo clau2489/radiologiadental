@@ -34,7 +34,7 @@
           </div>
           <div class="form-group">
             <div class="col-md-offset-4 col-md-4 col-md-offset-4">
-              <button type="submit" class="btn btn-primary"><i class='fa fa-plus-circle'></i> Agregar Usuario</button>
+              <button type="submit" class="btn btn-primary"><i class='fa fa-plus-circle'></i> Agregar</button>
             </div>
           </div>
         </form>

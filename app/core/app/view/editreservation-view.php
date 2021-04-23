@@ -116,13 +116,13 @@ $coverages = CoverageData::getAll();
               <div class="row">
                 <div class="col-md-4">
                   <input type="hidden" name="id" value="<?php echo $reservation->id; ?>">
-                  <button type="submit" class="btn btn-primary btn-lg btn-block"><i class="fa fa-retweet"></i> Actualizar Cita </button>
+                  <button type="submit" class="btn btn-default btn-block"><i class="fa fa-retweet"></i> Actualizar Cita </button>
                 </div>
                 <div class="col-md-4">
-                  <a href="core/app/view/report-view.php?id=<?php echo $reservation->id;?>" class="btn btn-primary btn-lg btn-block" download="TurnoOnlineRDX<?php echo $reservation->id;?>"><i class="fa fa-print"></i> Imprimir Constancia PDF</a>
+                  <a href="core/app/view/report-view.php?id=<?php echo $reservation->id;?>" class="btn btn-default btn-block" download="TurnoOnlineRDX<?php echo $reservation->id;?>"><i class="fa fa-print"></i> Imprimir PDF</a>
                 </div>
                 <div class="col-md-4">
-                  <a href="index.php?action=delreservation&id=<?php echo $reservation->id;?>" class="btn btn-primary btn-lg btn-block"><i class="fa fa-trash"></i> Eliminar Turno</a>
+                  <a href="index.php?action=delreservation&id=<?php echo $reservation->id;?>" class="btn btn-default btn-block"><i class="fa fa-trash"></i> Eliminar Turno</a>
                 </div>
               </div>
             </div>
