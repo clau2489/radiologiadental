@@ -10,7 +10,7 @@ foreach($events as $event){
 	$thejson[] = array("title"=>$event->time_at, 
 		"url"=>"./?view=editreservation&id=".$event->id, 
 		"start"=>$event->date_at, 
-		//"description"=>" Tipo de Estudio: " .$category->name. " Estado:".$status->name,
+		"description"=>" Tipo de Estudio: " .$category->name. " Estado:".$status->name,
 		"tooltip"=>$pacient->lastname." ".$pacient->name." DNI:".$pacient->document
 	);
 }
