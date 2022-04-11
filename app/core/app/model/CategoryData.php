@@ -12,8 +12,8 @@ class CategoryData {
 	}
 
 	public function add(){
-		$sql = "insert into category (name) ";
-		$sql .= "value (\"$this->name\")";
+		$sql = "insert into category (name, color) ";
+		$sql .= "value (\"$this->name\", \"$this->color\")";
 		return Executor::doit($sql);
 	}
 
@@ -28,7 +28,7 @@ class CategoryData {
 
 // partiendo de que ya tenemos creado un objecto CategoryData previamente utilizamos el contexto
 	public function update(){
-		$sql = "update ".self::$tablename." set name=\"$this->name\" where id=$this->id";
+		$sql = "update ".self::$tablename." set name=\"$this->name\", color=\"$this->color\" where id=$this->id";
 		Executor::doit($sql);
 	}
 

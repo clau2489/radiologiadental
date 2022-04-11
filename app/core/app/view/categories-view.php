@@ -15,6 +15,7 @@
 				<table id="example" class="cell-border" style="width:100%">
 					<thead>
 					<th>Nombre</th>
+					<th>Color Asignado</th>
 					<th style="width:80px;"></th>
 					</thead>
 					<?php
@@ -22,6 +23,7 @@
 						?>
 						<tr>
 						<td><?php echo $user->name." ".$user->lastname; ?></td>
+						<td style="background-color: <?php echo $user->color; ?>; width: 20px"></td>
 						<td>
 							<div class="dropdown">
 								<button class="btn btn-default btn-block">Opciones</button>

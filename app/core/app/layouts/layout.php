@@ -45,60 +45,78 @@
       <div class="sidebar-wrapper">
         <img src="../img/header-bg.jpg" class="img-responsive">
         <ul class="nav">
-            <li class="">
+            <li <?php if ( $_SESSION["is_admin"] == "0"){ echo "style='display: none'"; } ?> >
                 <a href="./">
                     <i class="fa fa-home"></i>
                     <p>Inicio</p>
                 </a>
             </li>
-            <li>
+            <li <?php if ( $_SESSION["is_admin"] == "0"){ echo "style='display: none'"; } ?> >
                 <a href="./?view=reservations">
                     <i class="fa fa-calendar"></i>
                     <p>Turnos</p>
                 </a>
             </li>
-            <li>
+            <li <?php if ( $_SESSION["is_admin"] != "0"){ echo "style='display: none'"; } ?> >
+                <a href="./?view=reservationpacient">
+                    <i class="fa fa-calendar"></i>
+                    <p>Mis Turnos</p>
+                </a>
+            </li>
+            <li <?php if ( $_SESSION["is_admin"] == "0"){ echo "style='display: none'"; } ?>>
                 <a href="./?view=pacients">
+                    <i class="fa fa-search"></i>
+                    <p>Búsqueda rápida</p>
+                </a>
+            </li>
+            <li <?php if ( $_SESSION["is_admin"] == "0"){ echo "style='display: none'"; } ?>>
+                <a href="./?view=pacientsList">
                     <i class="fa fa-male"></i>
                     <p>Pacientes</p>
                 </a>
-            </li>
-            <li>
+            </li>            
+            <li <?php if ( $_SESSION["is_admin"] == "0"){ echo "style='display: none'"; } ?>>
                 <a href="./?view=medics">
                     <i class="fa fa-user-md"></i>
                     <p>Técnicos</p>
                 </a>
             </li>
-            <li>
+            <li <?php if ( $_SESSION["is_admin"] == "0"){ echo "style='display: none'"; } ?>>
                 <a href="./?view=categories">
                     <i class="fa fa-medkit"></i>
                     <p>Tipos de Estudios</p>
                 </a>
             </li>
-            <li>
+            <li <?php if ( $_SESSION["is_admin"] == "0"){ echo "style='display: none'"; } ?>>
                 <a href="./?view=coverages">
                     <i class="fa fa-th-list"></i>
                     <p>Coberturas</p>
                 </a>
             </li>
-            <li>
+            <li <?php if ( $_SESSION["is_admin"] == "0"){ echo "style='display: none'"; } ?>>
                 <a href="./?view=odontologos">
                     <i class="fa fa-user"></i>
                     <p>Odontólogos</p>
                 </a>
             </li>            
-            <li>
+            <li <?php if ( $_SESSION["is_admin"] == "2" or $_SESSION["is_admin"] == "0"){ echo "style='display: none'"; } ?> >
                 <a href="./?view=reports">
                     <i class="fa fa-area-chart"></i>
                     <p>Reportes</p>
                 </a>
             </li>
-            <li>
-                <a href="./?view=users">
-                    <i class="fa fa-users"></i>
-                    <p>Usuarios</p>
-                </a>
+            <li <?php if ( $_SESSION["is_admin"] == "2" or $_SESSION["is_admin"] == "0"){ echo "style='display: none'"; } ?> >
+              <a href="./?view=users">
+                  <i class="fa fa-users"></i>
+                  <p>Usuarios</p>
+              </a>
             </li>
+            <li <?php if ( $_SESSION["is_admin"] != "0"){ echo "style='display: none'"; } ?> >
+              <a href="./?view=newpacient">
+                  <i class="fa fa-users"></i>
+                  <p>Mi perfil</p>
+              </a>
+            </li>            
              <li>
                 <a href="logout.php">
                     <i class="fa fa-power-off"></i>
@@ -133,9 +151,11 @@
       </div>
       <footer class="footer">
         <div class="container-fluid">
+          <!--
           <p class="copyright pull-right">Sistema Web creado por     
-            <a href="http://www.oestedev.com" target="_blank"><img style="width: 60px" src="../img/logo.png">  </a>
+            <a href="http://www.oestedev.com" target="_blank"><img style="width: 60px" src="../img/logo.png"></a>
           </p>
+          -->
         </div>
       </footer>
     </div>

@@ -9,6 +9,10 @@
             <input type="text" name="name" required class="form-control" id="name" placeholder="Nombre">
           </div>
           <div class="form-group">
+            <label>Seleccione Color: *</label>
+            <input type="color" name="color" required class="" id="color">
+          </div>          
+          <div class="form-group">
             <div class="col-md-offset-4 col-md-4 col-md-offset-4">
               <button type="submit" class="btn btn-default btn-block"><i class='fa fa-plus-circle'></i> Agregar</button>
             </div>

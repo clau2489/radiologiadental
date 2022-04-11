@@ -56,7 +56,7 @@
 				if(count($users)>0){
 				// si hay usuarios
 					?>
-					<table id="example" class="cell-border" style="width:100%">
+					<table id="example" class="table table-responsive" style="width:100%">
 						<thead>
 							<th>Fecha</th>
 							<th>Hora</th>				
@@ -79,7 +79,7 @@
 									<div class="dropdown">
 										<button class="btn btn-default btn-block">Opciones</button>
 										<div class="dropdown-content">
-											<a target="_blank" href="https://api.whatsapp.com/send?phone=549<?php echo $pacient->phone?>&text=Sr/a%20<?php echo $pacient->name." ".$pacient->lastname; ?>%20nos%20contactamos%20de%20Radiologia%20Dental%20para%20informarte%20que%20el%20dia%20<?php echo $nueva_fecha; ?>%20a%20las%20<?php echo $user->time_at; ?>hs%20tenés%20reservado%20un%20turno%20para%20realizar%20el%20estudio:%20<?php echo $category->name; ?>%20con%20el%20Tecnico:%20<?php echo $medic->name." ".$medic->lastname; ?> "> Enviar Mensaje</a>
+											<a target="_blank" href="https://api.whatsapp.com/send?phone=549<?php echo $pacient->phone?>&text=Sr/a%20<?php echo $pacient->name." ".$pacient->lastname; ?>%20nos%20contactamos%20de%20Radiología%20Dental%20para%20informarle%20que%20el%20día%20<?php echo $nueva_fecha; ?>%20a%20las%20<?php echo $user->time_at; ?>hs%20tiene%20reservado%20un%20turno%20para%20realizar%20el%20estudio:%20<?php echo $category->name; ?>%20con%20el%20Tecnico:%20<?php echo $medic->name." ".$medic->lastname; ?> "> Enviar Mensaje</a>
 
 											<a href="index.php?view=editreservation&id=<?php echo $user->id;?>"> Ver Turno</a>
 
@@ -101,7 +101,7 @@
 	</div>
 </div>
 <script type="text/javascript">
-	$(document).ready(function() {
-		$('#example').DataTable();
-	} );
+	//$(document).ready(function() {
+	//	$('#example').DataTable();
+	//} );
 </script>

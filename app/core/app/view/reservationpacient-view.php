@@ -3,15 +3,14 @@
 <div class="row">
 	<div class="col-md-12">
 		<div class="card">
-			<h4 class="title">Búsqueda de Pacientes</h4>
-				<div class="card">
-					<a href="index.php?view=newpacient" class="btn btn-default"><i class='fa fa-plus-circle'></i> Nuevo Paciente</a>
-				</div>
-				
+		<div class="text-center">
+            <img src="../img/header-bg.jpg" style="width: 40%">
+        </div>
+			<h4 class="title">A continuación le pedimos que ingrese su DNI para realizar la busqueda de turnos asociados.</h4>				
 				<div class="jumbotron" style="background-color: #e9e9e9; padding: 1em">
 					<form class="form-inline" action="" method="POST">
 					  <div class="form-group mx-sm-3 mb-2">
-					    <label style="margin-right: 1em;">Ingrese el N° de Documento del Paciente: </label>
+					    <label style="margin-right: 1em;">N° de Documento</label>
 					    <input class="form-control" type="text" id="keywords" name="keywords" size="30" maxlength="30">
 					  </div>
 					  <input class="btn btn-success" type="submit" name="search" id="search" value="Buscar Paciente">
@@ -82,7 +81,7 @@ if (isset($_POST['search'])) {
 		  </thead>
 			<tbody>
 		    	<tr>
-					<td><strong>No hay pacientes con el DNI ingresado </strong></td>
+					<td><strong>No hay turnos registrados con el DNI ingresado. Por favor, actualice su información de paciente desde <a href="./?view=newpacient">Mi Perfil</a> </strong></td>
 				</td>
 		    </tr>
 		  </tbody>

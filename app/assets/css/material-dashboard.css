@@ -266,6 +266,7 @@ h2.title {
 }
 .main-panel > .content {
     min-height: 90%;
+    background-color: #e7e3e400;
 }
 .main-panel > .footer {
   border-top: 1px solid #e7e7e7;
@@ -1353,10 +1354,10 @@ output {
   color: #ffffff;
 }
 .alert.alert-danger {
-    background-color: #cccccc;
-    color: #000000;
+    background-color: #e7e7e7;
+    color: #505050;
     border-radius: 3px;
-    /* box-shadow: 0 12px 20px -10px rgba(244, 67, 54, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(244, 67, 54, 0.2); */
+    /* box-shadow: 0 12px 20px -10px rgb(244 67 54 / 28%), 0 4px 20px 0px rgb(0 0 0 / 12%), 0 7px 8px -5px rgb(244 67 54 / 20%); */
 }
 .alert.alert-danger a, .alert.alert-danger .alert-link {
   color: #ffffff;

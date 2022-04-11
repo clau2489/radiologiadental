@@ -1,5 +1,13 @@
+<style type="text/css">
+	.fc-title {
+    text-transform: initial;
+    color: white;
+}
+</style>
+
 <?php
 // Lo mismo que error_reporting(E_ALL);
+error_reporting(E_ALL ^ (E_NOTICE | E_WARNING | E_DEPRECATED));
 ini_set('error_reporting', E_ALL);
 $thejson=null;
 $events = ReservationData::getEvery();
@@ -7,11 +15,12 @@ foreach($events as $event){
 	$category = $event->getCategory();
 	$pacient = $event->getPacient();
 	$status = $event->getStatus();
-	$thejson[] = array("title"=>$event->time_at, 
+	$thejson[] = array("title"=>$event->time_at."hs - ".$category->name, 
 		"url"=>"./?view=editreservation&id=".$event->id, 
 		"start"=>$event->date_at, 
 		"description"=>" Tipo de Estudio: " .$category->name. " Estado:".$status->name,
-		"tooltip"=>$pacient->lastname." ".$pacient->name." DNI:".$pacient->document
+		"tooltip"=>$pacient->lastname." ".$pacient->name." DNI:".$pacient->document,
+		"color"=> $category->color,
 	);
 }
 ?>
@@ -34,6 +43,7 @@ foreach($events as $event){
 			},
 			defaultDate: '<?php echo date('Y-m-d');?>',
 			editable: false,
+			//eventColor: "#" + <?php $category->id ?> + "dcdcd",
 			eventLimit: true, // allow "more" link when too many events
 			events: <?php echo json_encode($thejson); ?>
 });

@@ -8,8 +8,12 @@
           <div class="form-group">
             <label>Nombre *</label>
             <input type="text" name="name" value="<?php echo $user->name;?>" class="form-control" id="name" placeholder="Nombre">
-
           </div>
+          <div class="form-group">
+          <div class="form-group">
+            <label>Seleccione Color: *</label>
+            <input type="color" name="color" required class="" id="color" value="<?php echo $user->color;?>">
+          </div>          
           <div class="form-group">
             <div class="col-md-offset-4 col-md-4 col-md-offset-4">
               <input type="hidden" name="user_id" value="<?php echo $user->id;?>">

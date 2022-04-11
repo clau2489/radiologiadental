@@ -43,6 +43,11 @@ class PacientData {
 		return Model::one($query[0],new PacientData());
 	}
 
+	public static function getBySearch($q){
+		$sql = "select * from ".self::$tablename." where document=$q";
+		$query = Executor::doit($sql);
+		return Model::one($query[0],new PacientData());
+	}	
 
 	public static function getAll(){
 		$sql = "select * from ".self::$tablename." order by lastname asc";
