@@ -12,10 +12,12 @@ if(Session::getUID()=="") {
 		$found = true ;
 		$userid = $r['id'];
 		$is_admin = $r['is_admin'];
+		$document = $r['document'];
 	}
 	if($found==true) {
 		$_SESSION['user_id']=$userid ;
 		$_SESSION['is_admin']=$is_admin ;
+		$_SESSION['document']=$document;
 		print "Cargando ... $user";
 		if($_SESSION['is_admin'] == "0"){
 			print "<script>window.location='index.php?view=reservationpacient';</script>";

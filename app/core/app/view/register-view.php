@@ -33,6 +33,10 @@
                     <input type="text" name="lastname" required class="form-control" id="lastname" placeholder="Apellido">
                 </div>
                 <div class="form-group">
+                    <label>Documento*</label>            
+                    <input type="number" min="1" maxlength="9" name="document" required class="form-control" id="document" placeholder="N° de Documento">
+                </div>                
+                <div class="form-group">
                     <label>Nombre de usuario *</label>            
                     <input type="text" name="username" class="form-control" required id="username" placeholder="Nombre de usuario">
                 </div>
@@ -62,10 +66,16 @@
                 </div>       
                 <div class="form-group">
                     <div class="col-md-offset-4 col-md-4 col-md-offset-4">
-                        <button type="submit" class="btn btn-primary"><i class='fa fa-check'></i> Validar y Registrarse</button>
+                        <button type="submit" class="btn btn-primary btn-block"><i class='fa fa-check'></i> Validar y Registrarse</button>
                     </div>
                 </div>
+                <div class="form-group">
+                    <div class="col-md-offset-4 col-md-4 col-md-offset-4">
+                        <a href="index.php?view=login" class="btn btn-default btn-block"> Iniciar Sesión</a>
+                    </div>
+                </div>                
             </form>
+
         </div>
     </div>
   </div>

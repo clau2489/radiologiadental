@@ -7,6 +7,7 @@ if(count($_POST)>0){
 	$user->name = $_POST["name"];
 	$user->lastname = $_POST["lastname"];
 	$user->username = $_POST["username"];
+	$user->document = $_POST["document"];
 	$user->email = $_POST["email"];
 	$user->is_active = "1";
 	$user->is_admin=$is_admin;
@@ -14,7 +15,7 @@ if(count($_POST)>0){
 	$user->add();
 
 	if(isset($_POST['accept'])){
-		print "<script>window.location='index.php?view=registerconfirm';</script>";
+		print "<script>window.location='index.php?view=registerconfirm';</script>"; 
 	}
 	else{
 		print "<script>window.location='index.php?view=users';</script>";

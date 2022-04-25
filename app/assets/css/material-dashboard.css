@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: sans-serif;
     line-height: 1.42857143;
     color: #333;
     background-color: #fff;
@@ -101,7 +101,6 @@ h2.title {
 .sidebar .nav p, .off-canvas-sidebar .nav p {
     margin: 0;
     line-height: 30px;
-    font-size: 12px;
     color: #ffffff;
 }
 .sidebar .nav i, .off-canvas-sidebar .nav i {
@@ -4133,7 +4132,7 @@ footer .btn {
 
 .sidebar {
     /* background-color: #8b82b0; */
-    background-color: #8bc2a1;
+    background-color: #8a82b2;
     text-transform: initial;
 }
 .main-panel {
@@ -4196,7 +4195,7 @@ select {
 .form-control {
     font-weight: bold;
     color: black;
-    text-transform: uppercase;
+    text-transform: none;
 }
 .filter-option-inner-inner {
     font-weight: bold;
@@ -4309,7 +4308,7 @@ label {
     font-size: 12px;
     font-family: sans-serif;
     font-weight: normal;
-    text-transform: capitalize;
+    text-transform: none;
 }
 
 

@@ -110,12 +110,6 @@
                   <i class="fa fa-users"></i>
                   <p>Usuarios</p>
               </a>
-            </li>
-            <li <?php if ( $_SESSION["is_admin"] != "0"){ echo "style='display: none'"; } ?> >
-              <a href="./?view=newpacient">
-                  <i class="fa fa-users"></i>
-                  <p>Mi perfil</p>
-              </a>
             </li>            
              <li>
                 <a href="logout.php">
